@@ -1,0 +1,266 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Simkl for Netflix, Crunchyroll and others</title>
+    <script src="js/utils/jquery-2.1.3.min.js"></script>
+    <script src="js/utils/moment.js"></script>
+    <script src="js/utils/util.js"></script>
+    <script src="js/utils/storage.js"></script>
+    <script src="js/popup.js" type="module"></script>
+    <link href="css/style_popup.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<div id="scrollbox3">
+    <div class="ExtBlockIframe">
+        <iframe width="660px" height="173px" name="SimklWatchlist" id="SimklIFrame" frameborder="0" scrolling="no"
+                allowtransparency="true"></iframe>
+    </div>
+    <div class="netflixsettings" id="netflixSettings" style="display: none">
+        <div class="netflixsettingstitle">Netflix Settings</div>
+        <div class="netflixsettingsdesc">Please select a Netflix profile that will be allowed to import watch history:
+        </div>
+        <div class="netflixsettingschoose">
+            <div class="netflixsettingsselect">
+                <div class="form-block w-form">
+                    <div class="form"><select class="netflixsettingsselector w-select" id="field" name="field">
+                        <option></option>
+                    </select></div>
+                </div>
+            </div>
+        </div>
+        <div class="netflixsettingssave">
+            <div class="netflixsettingssavebtn">SAVE</div>
+        </div>
+    </div>
+
+    <div class="ExtBlockChecking" style="display: none;">
+        <div class="ExtBlockCheckingBg">
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                <tbody>
+                <tr>
+                    <td align="center" style="padding-top: 25px">
+                        <div class="ExtBlockCheckingIco"></div>
+                        <div class="ExtBlockCheckingTitle">Checking Netflix</div>
+                        <div class="ExtBlockCheckingDesk">We are syncing your watch history with Simkl</div>
+                            <div id="netflixCount" class="Netflix" style="display: none;">
+                                Exporting <span style="color: #05ff05">0</span> of <span
+                                    style="font-weight: bold">0</span></div>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+
+    <div class="v2settings" id="extBlockSettings">
+        <div class="v2status">
+            <div class="v2statusleft">
+                <div class="v2statusleftempty">Enable enhancer on:</div>
+                <div class="v2statuslefttimer ExtSettingsNextCounter"><br></div>
+            </div>
+            <div class="v2statusright">
+                <div class="v2statusrightrefresh" id="check-now">
+                    <div class="v2statusrightrefreshico"></div>
+                    <div class="v2statusrightrefreshtext">Check now</div>
+                </div>
+            </div>
+        </div>
+        <div class="v2blocks">
+            <div class="v2block" id="blockNetflix">
+                <div class="v2blockhead">
+                    <div class="v2blockheadleft">
+                        <div class="v2blockheadleftswitch"><input name="togglenetflix" class="toggle"
+                                                                  type="checkbox"
+                                                                  id="togglenetflix"><label
+                                for="togglenetflix"></label></div>
+                        <label for="togglenetflix" class="v2blockheadlefttitle">Netflix</label>
+                    </div>
+                    <div class="v2blockheadright">
+                        <div class="v2blockheadrstart">RESTART IMPORT</div>
+                    </div>
+                </div>
+                <div class="v2blockitem">
+                    <label for="toggleimdb" class="v2blockitemleft">
+                        <div class="v2blockitemleftmain">
+                            <div class="v2blockitemleftmaindesc">Show IMDB, Simkl ratings on Netflix when hovering
+                                thumbnails
+                            </div>
+                        </div>
+                    </label>
+                    <div class="v2blockitemright">
+                        <div class="v2blockitemrighttoggle">
+                            <input name="toggleimdb" class="toggle" type="checkbox" id="toggleimdb"><label
+                                for="toggleimdb"></label>
+                        </div>
+                    </div>
+                </div>
+                <div class="v2blockitem">
+                    <label for="togglebrowse" class="v2blockitemleft">
+                        <div class="v2blockitemleftmain">
+                            <div class="v2blockitemleftmaindesc">Show&nbsp;<strong>Simkl Browse</strong>&nbsp;menu (discover 27000 secret Netflix
+                                categories)
+                            </div>
+                        </div>
+                    </label>
+                    <div class="v2blockitemright">
+                        <div class="v2blockitemrighttoggle">
+                            <input name="togglebrowse" class="toggle" type="checkbox" id="togglebrowse"><label
+                                for="togglebrowse"></label>
+                        </div>
+                    </div>
+                </div>
+                <div class="v2blockitem">
+                    <label class="v2blockitemleft" for="togglenetflixhistory">
+                        <div class="v2blockitemleftmain">
+                            <dev class="v2blockitemleftmaindesc">Export watch history from Netflix to Simkl</dev>
+                            <div class="v2blockitemleftmainaccount" id="netflixSettingsIco" style="display: none;">
+                                <div class="v2blockitemleftmainaccountsettingsico"></div>
+                                <div class="v2blockitemleftmainaccountname"></div>
+                            </div>
+                        </div>
+                        <div class="v2blockitemleftmore">
+                            <div id="netflixLastWatched" class="ExtSwitchLastWatched Netflix">
+                                Last watched:
+                                <div><a href="http://api.simkl.com/search/" target="_blank"></a></div>
+                            </div>
+                            <div id="netflixNeedsLogin" class="ExtSwitchAlert Netflix"
+                                 style="display: none;">
+                                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                    <tbody>
+                                    <tr>
+                                        <td width="1"><img src="ico/ico_28x26_alert.png" width="28" height="27" alt=""/></td>
+                                        <td>Please <a href="http://www.netflix.com/" target="_blank">log in to
+                                            Netflix</a> then click “Check now”.<br>Or turn off Netflix check to hide this message.
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div id="netflixErrorUser" class="ExtSwitchAlert Netflix"
+                                 style="display: none;">
+                                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                    <tbody>
+                                    <tr>
+                                        <td width="1"><img src="ico/ico_28x26_alert.png" width="28" height="27" alt=""/></td>
+                                        <td>
+                                            <span>Some user detection error<br>Open <a href="http://www.netflix.com/"
+                                                                                       target="_blank">https://netflix.com/</a> and log in, choose your personal profile and then open chrome extension and enable netflix again, see if that helps. Or contact support@simkl.com</span>
+                                            <span>You're currently using {current} profile, switch to {last} profile on Netflix to continue syncing</span>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                        </div>
+                    </label>
+                    <div class="v2blockitemright">
+                        <div class="v2blockitemrighttoggle">
+                            <input name="togglenetflixhistory" class="toggle" type="checkbox" id="togglenetflixhistory"><label for="togglenetflixhistory"></label>
+                        </div>
+                    </div>
+                </div>
+                <div class="v2blockitem">
+                    <label for="togglenetflixgrey" class="v2blockitemleft">
+                        <div class="v2blockitemleftmain">
+                            <div class="v2blockitemleftmaindesc">Grey out watched<span style="color:red;padding-left:16px; display: none;" id="needEnableSimkl"> You need to enable Export to Simkl first</span></div>
+                        </div>
+                    </label>
+                    <div class="v2blockitemright">
+                        <div class="v2blockitemrighttoggle">
+                            <input name="togglenetflixgrey" class="toggle" type="checkbox" id="togglenetflixgrey"><label for="togglenetflixgrey"></label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="v2block" id="blockCrunchy">
+                <div class="v2blockhead">
+                    <div class="v2blockheadleft">
+                        <div class="v2blockheadleftswitch"><input name="togglecrunchy" class="toggle" type="checkbox"
+                                                                  id="toggleCrunchy"><label for="toggleCrunchy"></label></div>
+                        <label for="toggleCrunchy" class="v2blockheadlefttitle">Crunchyroll</label>
+                    </div>
+                    <div class="v2blockheadright">
+                        <div class="v2blockheadrstart">RESTART IMPORT</div>
+                    </div>
+                </div>
+                <div class="v2blockitem">
+                    <label class="v2blockitemleft" for="togglecrunchyhistory">
+                        <div class="v2blockitemleftmain">
+                            <div class="v2blockitemleftmaindesc">Export watch history from Crunchyroll to Simkl</div>
+                        </div>
+                        <div class="v2blockitemleftmore">
+
+
+                            <div id="crunchyLastWatched" class="ExtSwitchLastWatched Crunchy"
+                                 style="display: none;">Last watched:
+                                <div>
+                                    <a href="#" target="_blank"></a>
+                                </div>
+                            </div>
+                            <div id="crunchyNeedsLogin" class="ExtSwitchAlert Crunchy" style="display: none">
+                                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                    <tbody>
+                                    <tr>
+                                        <td width="1"><img src="ico/ico_28x26_alert.png"
+                                                           width="28" height="27" alt=""/></td>
+                                        <td>Please <a href="https://www.crunchyroll.com/login?next=%2F" target="_blank">log
+                                            in to Crunchyroll</a> then click “Check now”.<br>
+                                            Or turn off Crunchyroll check to hide this message.
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                        </div>
+
+
+                    </label>
+                    <div class="v2blockitemright">
+                        <div class="v2blockitemrighttoggle">
+                            <input name="togglecrunchyhistory" class="toggle" type="checkbox" id="togglecrunchyhistory"><label for="togglecrunchyhistory"></label>
+                        </div>
+                    </div>
+                </div>
+                <div class="v2blockitem">
+                    <label for="togglecrunchcyzero" class="v2blockitemleft">
+                        <div class="v2blockitemleftmain">
+                            <div class="v2blockitemleftmaindesc">Export even when episode progress = 0%</div>
+                            <div class="v2blockitemleftmaindesclink"><a
+                                    href="https://support.simkl.org/knowledgebase/articles/735615" target="_blank"
+                                    class="v2blockitemleftmaindescurl">What is this?</a></div>
+                        </div>
+                    </label>
+                    <div class="v2blockitemright">
+                        <div class="v2blockitemrighttoggle">
+                            <input name="togglecrunchcyzero" class="toggle" type="checkbox" id="togglecrunchcyzero"><label for="togglecrunchcyzero"></label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="v2footer ExtFooter">
+            <table border="0" cellspacing="0" cellpadding="0">
+                <tbody>
+                <tr>
+                    <td valign="middle" class="ExtSwitchLastWatched">&nbsp;&nbsp;&nbsp;&nbsp;<a
+                            href="https://www.facebook.com/groups/Simkl/" target="_blank">FB Group</a> | <a
+                            href="https://discord.gg/u89XfYn" target="_blank">Discord</a> | <a
+                            href="https://chrome.google.com/webstore/detail/enhancer-for-netflix-hulu/dbpjfmehfpcgmlpfnfilcnhbckmecmca/reviews"
+                            target="_blank">Rate</a> | <a href="https://support.simkl.org/" target="_blank">Send
+                        Feedback</a> <span id="ext_version"></span></td>
+                </tr>
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+
+
+</div>
+</body>
+</html>

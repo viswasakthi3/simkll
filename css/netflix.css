@@ -1,0 +1,995 @@
+/* open-sans-300 - latin */
+@font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 300;
+    src: local('Open Sans Light'), local('OpenSans-Light'),
+    url('chrome-extension://dbpjfmehfpcgmlpfnfilcnhbckmecmca/fonts/open-sans-v15-latin-300.woff2') format('woff2') /* Chrome 26+, Opera 23+, Firefox 39+ */
+}
+/* open-sans-regular - latin */
+@font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Open Sans Regular'), local('OpenSans-Regular'),
+    url('chrome-extension://dbpjfmehfpcgmlpfnfilcnhbckmecmca/fonts/open-sans-v15-latin-regular.woff2') format('woff2') /* Chrome 26+, Opera 23+, Firefox 39+ */
+}
+/* open-sans-600 - latin */
+@font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 600;
+    src: local('Open Sans SemiBold'), local('OpenSans-SemiBold'),
+    url('chrome-extension://dbpjfmehfpcgmlpfnfilcnhbckmecmca/fonts/open-sans-v15-latin-600.woff2') format('woff2') /* Chrome 26+, Opera 23+, Firefox 39+ */
+}
+/* open-sans-700 - latin */
+@font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 700;
+    src: local('Open Sans Bold'), local('OpenSans-Bold'),
+    url('chrome-extension://dbpjfmehfpcgmlpfnfilcnhbckmecmca/fonts/open-sans-v15-latin-700.woff2') format('woff2') /* Chrome 26+, Opera 23+, Firefox 39+ */
+}
+
+.SimklGreyOut .SimklNetflixPosterCompleted .ptrack-content {
+    -webkit-filter: grayscale(1);
+    filter: grayscale(1);
+    opacity: 0.2
+}
+
+.SimklGreyOut .SimklNetflixPosterCompleted:hover .ptrack-content {
+    -webkit-filter: grayscale(0);
+    filter: grayscale(0);
+}
+
+.SimklNetflixPosterCompleted .SimklStatusIco {
+    position: absolute;
+    bottom: 12px;
+    left: 12px;
+    z-index: 1;
+    width: 22px;
+    height: 22px;
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAWCAMAAADzapwJAAAAP1BMVEUAAAD///////////////////////////////8YHyPx8fFDSEzU1dYmLDCoq6yanZ6Mj5FucnW3ubp9gYNSV1o0/Pc6AAAACHRSTlMA8ODAoFAwIOk3uq8AAACJSURBVBjTddHZDsQgCAVQtBTBLtNZ/v9bp9JSahNujMbzgAtwhDDznowEnjLwlaGYjolvSeOp/Ih6SU9OrY7X9foA1MurtpkAO33L1BaE3Kv89P6g23mrWkFkqgoHL7pdTY2/DUydeRNZ9jHzGTtylbtmQDZ3ZfTnfFyZgscHXxV8bNCGoGlBi//EDwzrDbJS5QAAAABJRU5ErkJggg==');
+}
+
+.SimklNetflixPosterNotInteresting .ptrack-content {
+    -webkit-filter: grayscale(1);
+    filter: grayscale(1);
+    opacity: 0.2
+}
+
+.SimklNetflixPosterNotInteresting:hover .ptrack-content {
+    -webkit-filter: grayscale(0);
+    filter: grayscale(0);
+}
+
+.SimklNetflixPosterNotInteresting .SimklStatusIco {
+    position: absolute;
+    bottom: 12px;
+    left: 12px;
+    z-index: 1;
+    width: 23px;
+    height: 22px;
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABcAAAAWCAMAAAAcqPc3AAAAM1BMVEUAAAD///////////////////////////////////////////////////////////////+3leKCAAAAEHRSTlMAgEDA8OAQ0DCgkCBgsHBQ+AyZCgAAAKVJREFUKM9tkVkOwyAMRPHGFkLm/qctBlWpCu8DaR5gYRMGTbGwu3P2kOLQUbWScyc4lQpoeEYLX5iSVDzTF5g8747c2t1nJObrx0cO7gns+fVjWZ44H7xBhHbPqB4Pvh99BpIcPKHHcPSud98gtJi9NdPGNN+vWMQ5E/Woq//MzPD7FXLFEX5KQ+aowj+4/Thv3sZRsbBR8HitjUu1oISdbLD3ez5qwgcFCbx7wAAAAABJRU5ErkJggg==');
+}
+
+.SimklNetflixPosterPlanToWatch .SimklStatusIco {
+    position: absolute;
+    bottom: 12px;
+    left: 12px;
+    z-index: 1;
+    width: 23px;
+    height: 22px;
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABcAAAAWCAMAAAAcqPc3AAAAM1BMVEUAAAD///////////////////////////////////////////////////////////////+3leKCAAAAEHRSTlMAQBAgYNDAoJDwgLDff3BPF0cKcAAAAJ9JREFUKM9tUFsSAyEIE3URn5v7n7bKTJVp5UMxIZiJOyUQdylCA13wBEL6hwPSpMJlPCh3GVfSYjTkAenfjwxSzlesal1HetNX9a6A+0vW79sZZUn9z19el8ZNHDjOyxIWtoSFlRCTXjxa8G45m5Uouy84O8loowl7aE9FTwyjnSFVAHVGY3Zy8wKkkADxzXrIa1RFOR88ZqavBc7q4QMomAZYe0Jd5QAAAABJRU5ErkJggg==');
+}
+
+.SimklNetflixPosterWatching .SimklStatusIco {
+    position: absolute;
+    bottom: 12px;
+    left: 12px;
+    z-index: 1;
+    width: 23px;
+    height: 22px;
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABcAAAAWCAMAAAAcqPc3AAAAM1BMVEUAAAD///////////////////////////////////////////////////////////////+3leKCAAAAEHRSTlMA8IAw4HAQQMCQYKBQINCwydda4wAAAIFJREFUKM+9kM0SxCAIgxMQ/2q3vP/TbvWguzNOj81JP5gEwDuKlr0rW/yl0lGR0osyKxo8VD3oPLTeb8VQowuUcuIUKsTZRjeZgGB6EbAMJFKBGPzG6RM5IrtJ8hBhLgBE2oWuYv3nNrmmPz59Bl0+KxfAyt3PWR/22t1hf7dX9AXkxgWtS07GxwAAAABJRU5ErkJggg==');
+}
+
+/** Ratings hover */
+.SimklNetflixRatingsHoverWraper {
+    padding-top: 7px;
+    pointer-events: none;
+}
+
+.SimklNetflixRatingsHoverWraper td {
+    position: relative;
+    z-index: 10;
+    cursor: pointer;
+    pointer-events: auto;
+}
+
+.SimklNetflixRatingsHoverRating {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    text-align: left;
+    text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.65);
+}
+
+.SimklNetflixRatingsHoverVotes {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    color: rgb(158, 158, 158);
+    text-align: center;
+}
+
+.SimklNetflixRatingsHoverIMDB, .SimklNetflixRatingsHoverSimkl, .SimklNetflixRatingsHoverRank, .SimklNetflixRatingsHoverDrop, .SimklNetflixRatingsHoverTrailer {
+    cursor: pointer;
+}
+
+.SimklNetflixRatingsHoverIMDB img {
+    height: 20px;
+    padding-right: 4px;
+    padding-top: 2px;
+}
+
+.SimklNetflixRatingsHoverSimkl img {
+    height: 20px;
+    padding-right: 4px;
+    padding-top: 2px;
+}
+
+.SimklNetflixRatingsHoverRankText, .SimklNetflixRatingsHoverDropText {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.74);
+    text-align: center;
+}
+
+.SimklNetflixRatingsHoverRankValue, .SimklNetflixRatingsHoverDropValue {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    text-align: center;
+}
+
+/** RANDOM ***/
+.SimklNetflixRandomWrapper {
+    position: absolute;
+    top: 50px;
+}
+
+li.dvdLink.SimklNetflixRandom .SimklNetflixRandomWrapper {
+    display: none;
+    transform: translate(0px, 20px);
+}
+
+.SimklNetflixRandomAnime{
+    margin-right: 15px;
+}
+
+/*
+li.dvdLink.SimklNetflixRandom:hover .SimklNetflixRandomWrapper {
+    pointer-events: auto;
+    opacity: 1;
+    transition: all 0.4s;
+    transform: scale(1);
+    transform-origin: top
+    left;
+}
+*/
+
+li.dvdLink .SimklNetflixRandomWrapper {
+    cursor: default;
+    line-height: 100%;
+}
+
+.SimklNetflixRandomArrow {
+    background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABBQAAAAOAgMAAADic6fhAAAACVBMVEUAAADl5eXl5eWYP5lBAAAAAnRSTlMAoKBFbtAAAABISURBVEjH7dQxEYAwAMDAdAARVYOeqkEEC1HJcYcL8hIyhM9GYB6EdZLhRXZvMrUxsLQxDG0M7NoYmNoYWNoYhv58DEar8HoAtpxynD11AUIAAAAASUVORK5CYII=') no-repeat;
+    background-position: bottom left;
+    height: 14px;
+    transform: rotateX(0deg) rotateY(-180deg) rotateZ(0deg);
+}
+
+.SimklNetflixRandomPopup {
+    background-color: rgba(0, 0, 0, 0.96);
+    border-color: rgba(229, 229, 229, 0.54);
+    border-width: 1px;
+    border-style: solid;
+}
+
+.SimklNetflixRandomPlayText {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 26px;
+    color: rgb(229, 6, 19);
+}
+
+.SimklNetflixRandomType {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: transparent;
+    border-color: rgb(229, 229, 229);
+    border-width: 1px;
+    border-style: solid;
+    padding: 10px;
+    margin-left: 30px;
+    font-size: 26px;
+    color: rgb(229, 229, 229);
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+.SimklNetflixRandomType:hover {
+    opacity: 1;
+}
+
+.SimklNetflixRandomType.Active {
+    border-color: rgb(229, 9, 20);
+    color: rgb(229, 9, 20);
+    opacity: 1;
+    background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAeBAMAAADA9RPrAAAAIVBMVEUAAADlCRTlCRTlCRTlCRTlCRTlCRTlCRTlCRTlCRTlCRR5SUzAAAAACnRSTlMAYJ9QoO/QwDAQPCSeiAAAADNJREFUGNNjGNyAeQIyTyoBicO4SgDGtHJgkFrIAOctYVylgKSsahGyEUApBOAIYhgCAABJNges+C8mLAAAAABJRU5ErkJggg==') no-repeat right;
+    padding-right: 40px;
+}
+
+.SimklNetflixRandomFilterTable {
+    border-color: rgb(229, 229, 229, 0.5);
+    border-top-width: 1px;
+    border-style: solid;
+}
+
+.SimklNetflixRandomFilterDesc {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    color: rgb(255, 255, 255);
+    text-align: left;
+    padding-top: 30px;
+    padding-bottom: 15px;
+}
+
+.SimklNetflixRandomSelect {
+    overflow: hidden;
+    background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAeBAMAAADA9RPrAAAAHlBMVEUAAAD///////////////////////////////////8kfJuVAAAACXRSTlMAPzAQ8NDADATQK4koAAAAMUlEQVQY02MYKqBJEAwKIDzmyJlA4ASTNAVypigAGVBJsBRcEiyFkHRCNtZMgWHQAwCZPwtVnCMalAAAAABJRU5ErkJggg==') no-repeat right;
+}
+
+.SimklNetflixRandomSelect select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-indent: 0.01px;
+    text-overflow: "";
+    background: transparent;
+    padding: 5px;
+    padding-right: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    color: rgb(255, 255, 255);
+    border: 1;
+    height: 34px;
+    border-color: #FFFFFF;
+    border-top-width: 1px;
+    border-style: solid;
+}
+
+.SimklNetflixRandomSelect select option {
+    background-color: #FFF;
+    color: #000;
+}
+
+.SimklNetflixRandomSelect select:focus {
+    outline: 0;
+}
+
+.SimklNetflixRandomFilterTire {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    color: rgb(255, 255, 255);
+    padding: 10px;
+}
+
+.SimklNetflixRandomBtn {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 41px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(185, 9, 11);
+    width: 100%;
+    line-height: 70px;
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.SimklNetflixRandomBtn:hover {
+    background-color: rgb(229, 9, 20);
+}
+
+.SimklNetflixRandomPowered a {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    text-decoration: none;
+}
+
+.SimklNetflixRandomPowered a:hover {
+    text-decoration: underline;
+}
+
+/* START SECRET */
+
+.SimklNetflixRandomWrapper {
+    position: absolute;
+    top: 38px;
+}
+
+li.SimklNetflixSecret .SimklNetflixRandomWrapper {
+    transform: translate(0px, 20px);
+}
+
+li.SimklNetflixSecret .SimklNetflixRandomWrapper {
+    cursor: default;
+    line-height: 100%;
+}
+
+.SimklNetflixSecret .SimklNetflixRandomWrapper {
+    left: 0;
+    width: 656px;
+}
+
+.SimklNetflixSecret .SimklNetflixRandomArrow {
+    background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABBQAAAAOAgMAAADic6fhAAAACVBMVEUAAADl5eXl5eWYP5lBAAAAAnRSTlMAoKBFbtAAAABLSURBVEjH7dQxEYBAEMXQbLMKqE4Ndjg1iKAhKhlUwMz9JyFF+N5GwEFQ7kR7EsOLmN4srzRjoDVjYGjGwNSMoTRjoPUPYzA0FV4P97FynJlCiBIAAAAASUVORK5CYII=') no-repeat;
+    background-position: bottom center;
+}
+
+.SimklNetflixSecretList ul {
+    -moz-column-count: 3;
+    -moz-column-gap: 20px;
+    -webkit-column-count: 3;
+    -webkit-column-gap: 20px;
+    column-count: 3;
+    column-gap: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    margin: 0px;
+    border-color: rgba(255, 255, 255, 0.5);
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+}
+
+.SimklNetflixSecretList a {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 120%;
+    color: rgb(255, 255, 255);
+    text-align: left;
+    text-decoration: none;
+    width: 100%;
+    display: block;
+    white-space: normal;
+}
+
+.SimklNetflixSecretList a:hover {
+    text-decoration: underline;
+}
+
+.SimklNetflixSecretList li {
+    list-style-type: none;
+}
+
+.SimklNetflixSecretLetter {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 23px;
+    font-weight: bold;
+    line-height: 120%;
+    color: rgb(255, 255, 255);
+    text-align: left;
+    padding: 20px;
+    padding-bottom: 10px;
+}
+
+.SimklNetflixSecretScroll {
+    height: 426px;
+    overflow: auto;
+}
+
+.SimklNetflixSecretDescW {
+    position: relative;
+}
+
+.SimklNetflixSecretDesc {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.43);
+    text-align: right;
+}
+
+.SimklNetflixSecretFooter {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    width: 100%;
+    line-height: 120%;
+    color: rgba(255, 255, 255, 0.51);
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+#SimklBrowse .SimklBrowseRelativePosition {
+    display: none;
+    position: relative;
+}
+
+
+
+#SimklRandomizer .SimklBrowseRelativePosition {
+    display: none;
+    position: relative;
+}
+
+
+#SimklRandomizer .enhancerbrowse {width:620px}
+.SimklNetflixRandomPopup {border:0}
+
+#SimklBrowse .SimklBrowseHeaderLink {
+    color: #E01F21 !important;
+    font-weight: bold;
+}
+
+.SimklBrowsePosition {
+    position: absolute;
+    z-index: 5;
+    top: 45px;
+    left: -20px;
+}
+
+.enhancerbrowseitems::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.enhancerbrowseitems::-webkit-scrollbar {
+    width: 8px;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.enhancerbrowseitems::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.enhancerbrowseitems::-webkit-scrollbar-thumb:hover {
+    background-color: #FFBF00;
+}
+
+.enhancerbrowse {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    width: 405px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.enhancerbrowsetriangle {
+    position: relative;
+}
+
+.enhancerbrowseblock {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    border-radius: 6px;
+    background-color: #000;
+    box-shadow: 0 1px 3px 0 #000;
+}
+
+.enhancerbrowsesearchblock {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    background-color: #111;
+}
+
+.enhancerbrowsemenu {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    background-color: hsla(0, 0%, 7%, .6);
+}
+
+.enhancerbrowseitems {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    overflow: auto;
+    max-height: 60vh;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+.enhancerbrowsefooter {
+    padding: 15px 10px;
+    color: #464646;
+    text-align: center;
+}
+
+.enhancerbrowseitem {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    border-bottom: 1px solid #111;
+    cursor: pointer;
+}
+
+.enhancerbrowseitem:hover {
+    background-color: hsla(0, 0%, 7%, .5);
+}
+
+.enhancerbrowseitemtitle {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    padding-left: 16px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    color: #aeadad;
+    font-size: 16px;
+    line-height: 120%;
+    text-align: left;
+
+}
+
+.enhancerbrowseitemcount {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    width: 43px;
+    padding: 0px 10px;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    color: #aeadad;
+    font-size: 11px;
+}
+
+.enhancerbrowseitemcount:hover {
+    background-color: hsla(0, 0%, 7%, .5);
+}
+
+.enhancerbrowseitemlike {
+    width: 43px;
+    background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iMTIiIHZpZXdCb3g9IjAgMCAxNCAxMiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48dGl0bGU+aXRlbS9oZWFydDwvdGl0bGU+PHBhdGggZD0iTTcgMTEuNDk2bDQuODU3LTQuNjc4Yy4wOC0uMDc1LjE3LS4xNjQuMjg1LS4yOS4xOS0uMjA1LjM3OC0uNDM1LjU1My0uNjg0LjUwNi0uNzIzLjgwNS0xLjQ3LjgwNS0yLjE4OEMxMy41IDEuNjQ2IDEyLjMzLjUgMTAuMjY2LjVjLS45NTQgMC0xLjk5LjYzLTIuOTE1IDEuNTQzTDcgMi4zOWwtLjM1LS4zNDdDNS43MjIgMS4xMyA0LjY4Ny41IDMuNzMzLjUgMS42Ny41LjUgMS42NDYuNSAzLjY1NmMwIDEuMjMuODQ2IDIuNDU1IDEuNjI4IDMuMTRMNyAxMS40OTZ6bS4wMS4wMXoiIHN0cm9rZT0iIzk3OTc5NyIgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIi8+PC9zdmc+');
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+.enhancerbrowseitemlike.Active {
+
+    background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSIxNHB4IiBoZWlnaHQ9IjEycHgiIHZpZXdCb3g9IjAgMCAxNCAxMiIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj4gICAgICAgIDx0aXRsZT5pdGVtL2hlYXJ0L2FjdGl2ZTwvdGl0bGU+ICAgIDxkZXNjPkNyZWF0ZWQgd2l0aCBTa2V0Y2guPC9kZXNjPiAgICA8ZGVmcz48L2RlZnM+ICAgIDxnIGlkPSJTeW1ib2xzIiBzdHJva2U9Im5vbmUiIHN0cm9rZS13aWR0aD0iMSIgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj4gICAgICAgIDxnIGlkPSJpdGVtL2hlYXJ0L2FjdGl2ZSIgZmlsbD0iIzk4OTg5OCI+ICAgICAgICAgICAgPHBhdGggZD0iTTcuMDAwMDA4MzQsMTIuMDAwMDE0MyBDNi44NzUwMDgyLDEyLjAwMDAxNDMgNi43NTAwMDgwNSwxMS45NTMxMzkyIDYuNjU2MjU3OTMsMTEuODU5Mzg5MSBMMS43ODEyNTIxMiw3LjE1NjI1ODUzIEMxLjcxODc1MjA1LDcuMTAxNTcwOTcgMCw1LjUzMTI1NjU5IDAsMy42NTYyNTQzNiBDMCwxLjM2NzE4OTEzIDEuMzk4NDM5MTcsMCAzLjczNDM3OTQ1LDAgQzUuMTAxNTY4NTgsMCA2LjM4MjgyMDExLDEuMDc4MTI2MjkgNy4wMDAwMDgzNCwxLjY4NzUwMjAxIEM3LjYxNzE5NjU4LDEuMDc4MTI2MjkgOC44OTg0NDgxMSwwIDEwLjI2NTYzNzIsMCBDMTIuNjAxNTc3NSwwIDE0LjAwMDAxNjcsMS4zNjcxODkxMyAxNC4wMDAwMTY3LDMuNjU2MjU0MzYgQzE0LjAwMDAxNjcsNS41MzEyNTY1OSAxMi4yODEyNjQ2LDcuMTAxNTcwOTcgMTIuMjEwOTUyMSw3LjE3MTg4MzU1IEw3LjM0Mzc1ODc1LDExLjg1OTM4OTEgQzcuMjUwMDA4NjQsMTEuOTUzMTM5MiA3LjEyNTAwODQ5LDEyLjAwMDAxNDMgNy4wMDAwMDgzNCwxMi4wMDAwMTQzIFoiIGlkPSJIZWFydC0tLUZvbnRBd2Vzb21lIj48L3BhdGg+ICAgICAgICA8L2c+ICAgIDwvZz48L3N2Zz4=');
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+}
+
+.enhancerbrowseitemlike:hover {
+    background-color: hsla(0, 0%, 7%, .5);
+}
+
+.enhancerbrowseitemnumber {
+    padding: 2px 10px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: hsla(0, 0%, 59%, .35);
+    border-radius: 40px;
+}
+
+.enhancerbrowsesearchformblock {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    margin-bottom: 0px;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+}
+
+.enhancerbrowsesearchform {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+}
+
+.enhancerbrowsesearchinput {
+    margin: 10px;
+    padding-left: 35px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    border-style: solid;
+    border-width: 1px;
+    border-color: hsla(0, 0%, 84%, .1);
+    border-radius: 6px;
+    background-color: hsla(0, 0%, 100%, .06);
+    background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTUiIGhlaWdodD0iMTUiIHZpZXdCb3g9IjAgMCAxNSAxNSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48dGl0bGU+c2VhcmNoPC90aXRsZT48cGF0aCBkPSJNNS40NCA5LjE4Yy42OCAwIDEuMzA3LS4xNyAxLjg4LS41MS41NzMtLjM0IDEuMDI3LS43OTcgMS4zNi0xLjM3LjMzMy0uNTczLjUtMS4yLjUtMS44OCAwLS42OC0uMTY3LTEuMzA3LS41LTEuODgtLjMzMy0uNTczLS43ODctMS4wMjctMS4zNi0xLjM2LS41NzMtLjMzMy0xLjItLjUtMS44OC0uNS0uNjggMC0xLjMwNy4xNjctMS44OC41LS41NzMuMzMzLTEuMDMuNzg3LTEuMzcgMS4zNi0uMzQuNTczLS41MSAxLjItLjUxIDEuODggMCAuNjguMTcgMS4zMDcuNTEgMS44OC4zNC41NzMuNzk3IDEuMDMgMS4zNyAxLjM3LjU3My4zNCAxLjIuNTEgMS44OC41MXptNSAwbDQuMTQgNC4xNC0xLjI2IDEuMjYtNC4xNC00LjE2di0uNjZsLS4yNC0uMjJjLS40NjcuNDEzLTEuMDAzLjczLTEuNjEuOTUtLjYwNy4yMi0xLjIzNy4zMy0xLjg5LjMzLS45ODcgMC0xLjg5Ny0uMjQtMi43My0uNzJTMS4yMiA4Ljk3My43NCA4LjE2Qy4yNDcgNy4zMiAwIDYuNDA3IDAgNS40MmMwLS45ODcuMjQzLTEuODk3LjczLTIuNzNTMS44NzcgMS4yIDIuNzEuNzIgNC40NTMgMCA1LjQ0IDBjLjk4NyAwIDEuOS4yNDcgMi43NC43NC44MTMuNDggMS40NTcgMS4xMzMgMS45MyAxLjk2LjQ3My44MjcuNzEgMS43MzMuNzEgMi43MiAwIC42NjctLjExIDEuMzAzLS4zMyAxLjkxLS4yMi42MDctLjUzNyAxLjE0My0uOTUgMS42MWwuMjIuMjRoLjY4eiIgZmlsbD0iIzc2NzY3NiIgZmlsbC1ydWxlPSJldmVub2RkIi8+PC9zdmc+');
+    background-position: 10px 50%;
+    background-repeat: no-repeat;
+    color: #aeadad;
+    font-size: 17px;
+}
+
+.enhancerbrowsemenumain {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-justify-content: space-around;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    border-bottom: 1px solid #2d2d2d;
+}
+
+.enhancerbrowsemenusub {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    height: 43px;
+    border-bottom: 1px solid #2d2d2d;
+    color: #E01F21;
+}
+
+.enhancerbrowsemenumaintitle {
+    min-width: 25%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    color: #aeadad;
+    font-size: 18px;
+    line-height: 120%;
+    text-align: center;
+    cursor: pointer;
+}
+
+.enhancerbrowsemenumaintitle:hover {
+    color: #cacaca;
+}
+
+.enhancerbrowsemenumaintitle.enhancerbrowsemenumaintitleactive {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAD8AAAADCAYAAAFT4OefAAAAAXNSR0IArs4c6QAAAC9JREFUKBVj1NXV/c+ABzBSrACP4WApgjYQMoBS+QF1ABOlrqdE/4D6nBKHU0MvAEHECS1YExTuAAAAAElFTkSuQmCC');
+    background-position: 50% 100%;
+    background-repeat: repeat-x;
+}
+
+.enhancerbrowsemenusubtitle {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    padding-right: 10px;
+    padding-left: 10px;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    border-right: 1px solid #2d2d2d;
+    color: #aeadad;
+    cursor: pointer;
+}
+
+.enhancerbrowsemenusubtitle:hover {
+    color: #ccc;
+}
+
+.enhancerbrowsemenusubtitle.enhancerbrowsemenusubtitleactive {
+    background-color: #2d2d2d;
+    color: #989898;
+}
+
+.enhancerbrowsemenusubfav {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.enhancerbrowsemenusubfavico {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    width: 34px;
+    background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSIxNHB4IiBoZWlnaHQ9IjEycHgiIHZpZXdCb3g9IjAgMCAxNCAxMiIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj4gICAgICAgIDx0aXRsZT5pdGVtL2hlYXJ0L2FjdGl2ZTwvdGl0bGU+ICAgIDxkZXNjPkNyZWF0ZWQgd2l0aCBTa2V0Y2guPC9kZXNjPiAgICA8ZGVmcz48L2RlZnM+ICAgIDxnIGlkPSJTeW1ib2xzIiBzdHJva2U9Im5vbmUiIHN0cm9rZS13aWR0aD0iMSIgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj4gICAgICAgIDxnIGlkPSJpdGVtL2hlYXJ0L2FjdGl2ZSIgZmlsbD0iIzk4OTg5OCI+ICAgICAgICAgICAgPHBhdGggZD0iTTcuMDAwMDA4MzQsMTIuMDAwMDE0MyBDNi44NzUwMDgyLDEyLjAwMDAxNDMgNi43NTAwMDgwNSwxMS45NTMxMzkyIDYuNjU2MjU3OTMsMTEuODU5Mzg5MSBMMS43ODEyNTIxMiw3LjE1NjI1ODUzIEMxLjcxODc1MjA1LDcuMTAxNTcwOTcgMCw1LjUzMTI1NjU5IDAsMy42NTYyNTQzNiBDMCwxLjM2NzE4OTEzIDEuMzk4NDM5MTcsMCAzLjczNDM3OTQ1LDAgQzUuMTAxNTY4NTgsMCA2LjM4MjgyMDExLDEuMDc4MTI2MjkgNy4wMDAwMDgzNCwxLjY4NzUwMjAxIEM3LjYxNzE5NjU4LDEuMDc4MTI2MjkgOC44OTg0NDgxMSwwIDEwLjI2NTYzNzIsMCBDMTIuNjAxNTc3NSwwIDE0LjAwMDAxNjcsMS4zNjcxODkxMyAxNC4wMDAwMTY3LDMuNjU2MjU0MzYgQzE0LjAwMDAxNjcsNS41MzEyNTY1OSAxMi4yODEyNjQ2LDcuMTAxNTcwOTcgMTIuMjEwOTUyMSw3LjE3MTg4MzU1IEw3LjM0Mzc1ODc1LDExLjg1OTM4OTEgQzcuMjUwMDA4NjQsMTEuOTUzMTM5MiA3LjEyNTAwODQ5LDEyLjAwMDAxNDMgNy4wMDAwMDgzNCwxMi4wMDAwMTQzIFoiIGlkPSJIZWFydC0tLUZvbnRBd2Vzb21lIj48L3BhdGg+ICAgICAgICA8L2c+ICAgIDwvZz48L3N2Zz4=');
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+}
+
+.enhancerbrowsemenusubfavtext {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.enhancerbrowsetrianglebg {
+    position: relative;
+    z-index: 2;
+    height: 17px;
+    background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMTMiIHZpZXdCb3g9IjAgMCAyNCAxMyIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48dGl0bGU+dHJpYW5nbGU8L3RpdGxlPjxwYXRoIGZpbGw9IiMxMTEiIGQ9Ik0xMi4wMiAwbDEyLjAyMiAxMi4wMkgwIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiLz48L3N2Zz4=');
+    background-position: 57px 6px;
+    background-repeat: no-repeat;
+}
+
+/* empty favorites */
+.enhancerbrowsenofavorites {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    padding-right: 48px;
+    padding-left: 48px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    color: #aeadad;
+    text-align: center;
+}
+
+.enhancerbrowsenofavoritesdesc {
+    padding-bottom: 32px;
+    font-size: 15px;
+    line-height: 120%;
+}
+
+/* NOT PAYED */
+.enhancerbrowseunlock {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    padding-right: 48px;
+    padding-left: 48px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    color: #aeadad;
+    text-align: center;
+}
+
+.enhancerbrowseunlock1 {
+    padding-top: 32px;
+    padding-bottom: 32px;
+    font-size: 25px;
+    line-height: 120%;
+}
+
+.enhancerbrowseunlock2 {
+    font-size: 25px;
+    line-height: 120%;
+}
+
+.enhancerbrowseunlockbtn {
+    margin-top: 32px;
+    margin-bottom: 32px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    border-radius: 6px;
+    background-color: #b40a19;
+    -webkit-transition: all 200ms ease;
+    transition: all 200ms ease;
+    color: #fff;
+    font-size: 25px;
+    line-height: 120%;
+}
+
+.enhancerbrowseunlockbtn:hover {
+    background-color: #e60d21;
+}
+
+.enhancerbrowseunlock4 {
+    padding-bottom: 32px;
+    font-size: 21px;
+    line-height: 120%;
+    font-weight: 600;
+}
+
+.enhancerbrowseunlock5 {
+    padding-bottom: 32px;
+    font-size: 19px;
+    line-height: 120%;
+}
+
+.enhancerbrowseunlock6 {
+    padding-bottom: 32px;
+    color: #9b9b9b;
+    font-size: 24px;
+    line-height: 120%;
+}
+
+.enhancerbrowseunlock1bold {
+    color: #9b9b9b;
+    font-weight: 700;
+}
+
+.SimklNetflixTitleYear {font-size: 50%; opacity: 0.84;}
+
+.SimklNetflixHoverReaction {
+    position: absolute;
+    top: 0px;
+    right: 0;
+    font-size: 14px;
+    cursor: pointer;
+    padding: 10px;
+    opacity: 0.8;
+    padding-top: 5px;
+    line-height: 1;
+}
+
+.SimklNetflixHoverReaction:hover {
+    opacity:1;
+}
+
+.simklnetflixiframepopup {
+    background:rgba(12, 15, 17, 0.95);
+    position:fixed; bottom:0; right:0; z-index:100;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background-image: url('chrome-extension://dbpjfmehfpcgmlpfnfilcnhbckmecmca/ico/rolling.png');
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+
+}
+.simklnetflixiframepopup>div {
+    box-shadow: 0 0 40px 2px #000;
+}
+.simklnetflixiframepopup iframe {width:1024px; height:90vh;border: none; display: none;}
+
+
+/* AUG 2020 design */
+
+.mini-modal .SimklNetflixRatingsHoverWraper,.detail-modal .SimklNetflixRatingsHoverWraper {
+background-color: #2f2f2f;
+padding-bottom: 6px;
+}
+.detail-modal .SimklNetflixRatingsHoverWraper {
+padding-top: 16px;
+padding-bottom: 16px;
+padding-left: 10px;
+}
+.detail-modal .SimklNetflixRatingsHoverWraper table {
+max-width: 500px;
+}
+    
+.mini-modal .SimklNetflixRatingsHoverTrailer,.bob-card-adult-tall-panel-video-merch .SimklNetflixRatingsHoverTrailer {
+display:none;
+}
+
+.focus-trap-wrapper .SimklNetflixRatingsHoverEmpty,.bob-card-adult-tall-panel-video-merch .SimklNetflixRatingsHoverEmpty {
+display:none;
+}
+
+.SimklNetflixHoverYear {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    opacity: 1;
+    line-height: 1;
+    padding: 5px 10px 10px;
+}
+.detail-modal .SimklNetflixHoverYear {
+  margin-top: 18px;
+  margin-left: 18px;
+}
+.detail-modal .SimklNetflixHoverReaction {
+  margin-top: 18px;
+  margin-right: 60px;
+}
+  

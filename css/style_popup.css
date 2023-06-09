@@ -1,0 +1,906 @@
+body {
+	margin: 0px;
+	padding: 0px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	color: rgb(57,63,80);
+	background-color: #0C0F11;
+	background: url(../img/bg_default_mini.jpg);
+}
+.Hide {
+	display: none;
+}
+.ExtBlockIframe {
+	text-align: center;
+	background-color: rgba(11,15,18,0.47);
+}
+.ExtBlockSettings {
+	background-color: #FFFFFF;
+}
+.ExtSettingsNextCounter {
+	text-align: left;
+	line-height: 19px;
+}
+.ExtRefresh {
+	font-size: 13px;
+	vertical-align: middle;
+	cursor: pointer;
+	display: inline-block;
+	transition: all 0.5s;
+}
+.ExtRefreshIco {
+	background-image: url(../ico/ico_refresh.png);
+	background-position: left top;
+	background-repeat: no-repeat;
+	padding-right: 8px;
+	width: 17px;
+	height: 17px;
+	float: left;
+	transition: all 0.5s;
+}
+.ExtRefreshText {
+	height: 17px;
+	line-height: 19px;
+	float: right;
+	color: rgb(85,163,221);
+	transition: all 0.3s;
+	padding-bottom: 4px;
+}
+.ExtRefresh:hover .ExtRefreshIco {
+	background-image: url(../ico/ico_refresh_hover.png);
+	transform: rotate(30deg) translate(2px, 1px);
+}
+.ExtRefresh:hover .ExtRefreshText {
+	color: rgb(65,137,193);
+}
+/* START TOGGLES */
+
+/* The following hides the actual checkbox, so that we only see the label */
+:root {
+	--toggle-color: rgba(19,191,17,1);
+}
+input.toggle {
+	max-height: 0;
+	max-width: 0;
+	opacity: 0;
+	display: none;
+}
+/* The following provides the "container" for our toggle in its default (off) state */
+			
+input.toggle + label {
+	display: block;
+	position: relative;
+	box-shadow: inset 0 0 0px 1px #d5d5d5;
+	text-indent: -5000px;
+	height: 30px;
+	width: 50px;
+	border-radius: 15px;
+	cursor: pointer;
+}
+/* The following provides the green background for the "on" state of our toggle - it is hidden when the switch is off */
+			
+input.toggle + label:before {
+	content: "";
+	position: absolute;
+	display: block;
+	height: 30px;
+	width: 30px;
+	top: 0;
+	left: 0;
+	border-radius: 15px;
+	background: rgba(19,191,17,0);
+	-webkit-transition: .25s ease-in-out;
+}
+/* The following provides the actual switch and its drop shadow */
+			
+input.toggle + label:after  {
+	content: "";
+	position: absolute;
+	display: block;
+	height: 30px;
+	width: 30px;
+	top: 0;
+	left: 0px;
+	border-radius: 15px;
+	background: white;
+	box-shadow: inset 0 0 0 1px rgba(0,0,0,.2), 0 2px 4px rgba(0,0,0,.2);
+	-webkit-transition: .25s ease-in-out;
+}
+/* The following defines the "on" state for the switch */
+			
+input.toggle:checked + label:before {
+	width: 50px;
+	background: var(--toggle-color);
+}
+input.toggle:checked + label:after {
+	left: 20px;
+	box-shadow: inset 0 0 0 1px var(--toggle-color), 0 2px 4px rgba(0,0,0,.2);
+}
+/* END TOGGLES */
+
+.ExtSwitchName {
+	padding-left: 14px;
+	padding-right: 29px;
+	font-size: 24px;
+	line-height: 30px;
+	color: #959EA7;
+	text-align: left;
+}
+.ExtSwitchName.Active {
+	color: rgb(58,64,80);
+}
+.ExtSwitchLastWatched {
+	font-size: 11px;
+	color: rgb(107,119,133);
+	padding-bottom:16px;
+	padding-right:16px;
+}
+#netflixCount {
+	padding-bottom:36px;
+	padding-right:16px;
+	color: white;
+}
+
+#netflixCount:empty {
+	padding:0;
+}
+.ExtSwitchLastWatched a {
+	color: rgb(107,119,133);
+	text-decoration: none;
+}
+.ExtSwitchLastWatched a:hover {
+	text-decoration: underline;
+}
+.ExtSwitchAlert {
+	font-size: 11px;
+	line-height: 120%;
+	color: rgb(57,63,80);
+	font-weight: bold;
+	padding-bottom:16px;
+	padding-right:16px;
+}
+.ExtSwitchAlert img {
+	margin-right: 10px;
+}
+.ExtSwitchAlert a {
+	color: rgb(57,63,80);
+}
+.ExtSwitchAlertCheckNow {
+	color: rgb(85,163,221);
+	cursor: pointer;
+}
+.ExtSwitchAlertCheckNow:hover {
+	color: rgb(65,137,193);
+}
+/* START BLOCK WATCHING NOW */
+.ExtBlockWatchingSimklIcon {
+	padding-left: 29px;
+	padding-right: 29px;
+	background-image: url(../img/notification_watching_s_logo.png);
+	background-position: center top;
+	background-repeat: no-repeat;
+	width: 44px;
+	height: 33px;
+}
+.ExtBlockWatchingBg:hover .ExtBlockWatchingSimklIcon {
+	background-image: url(../img/notification_watching_s_logo_black.png);
+}
+.ExtBlockWatchingMarked .ExtBlockWatchingDesc {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	line-height: 120%;
+	color: rgb(255,255,255);
+	text-align: left;
+}
+.ExtBlockWatchingDesc {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	line-height: 120%;
+	color: rgba(255,255,255,0.74);
+	text-align: left;
+}
+
+
+.ExtBlockWatchedDesc {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	line-height: 120%;
+	color: white;
+	text-align: left;
+}
+.ExtBlockWatchingTitle, .ExtBlockWatchedTitle {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 21px;
+	line-height: 120%;
+	font-weight: bold;
+	color: rgb(255,255,255);
+	text-align: left;
+}
+.ExtBlockWatchedTitle {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 18px;
+}
+
+.ExtBlockWatchingMarked .ExtBlockWatchingTitle {
+	font-size: 18px;
+}
+.ExtBlockWatchingIcoMarked {
+	padding-left: 36px;
+	padding-right: 36px;
+}
+.ExtBlockWatchingTwitter {
+	padding: 36px;
+	cursor: pointer;
+	transition: all .2s ease-in-out;
+}
+.ExtBlockWatchingTwitter:hover {
+	transform: scale(1.1);
+}
+.ExtBlockWatchingTwitterIcon {
+}
+.ExtBlockWatchingTwitterText {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+	color: rgb(255,255,255);
+	text-align: center;
+}
+.ExtBlockWatchingBg:hover .ExtBlockWatchingTwitterText {
+	color: #29A8DF;
+}
+/* END BLOCK WATCHING NOW */
+
+
+
+
+/* START BLOCK CHECKING NOW */
+
+.ExtBlockWatching, .ExtBlockWatched, .ExtBlockChecking {
+	background-color: rgba(11,15,18,0.47);
+	width: 660px;
+	margin: 0 auto;
+	border-top-color: rgb(33,77,112);
+	border-top-width: 1px;
+	border-top-style: solid;
+}
+.ExtBlockWatchingBg, .ExtBlockWatchedBg, .ExtBlockCheckingBg {
+	background-color: rgba(86,163,221,0.24);
+}
+.ExtBlockCheckingCancel {
+	width: 40px;
+	cursor: pointer;
+	padding: 24px;
+	padding-bottom: 4px;
+	font-size: 13px;
+	color: rgb(107,217,158);
+}
+.ExtBlockWatching, .ExtBlockWatched {
+	cursor: pointer;
+}
+.ExtBlockWatchingBg:hover, .ExtBlockWatchedBg:hover {
+	background-color: rgb(255,255,255);
+}
+.ExtBlockWatchingBg:hover .ExtBlockWatchingDesc, .ExtBlockWatchingBg:hover .ExtBlockWatchingTitle, .ExtBlockWatchedBg:hover .ExtBlockWatchedDesc, .ExtBlockWatchedBg:hover .ExtBlockWatchedTitle {
+	color: #000000;
+}
+.ExtBlockCheckingIco {
+	background: url(../ico/ico_circle_loading.png);
+	width: 36px;
+	height: 36px;
+	margin-right: 6px;
+	-webkit-animation: RefreshRotation 1.5s infinite linear;
+	-moz-animation: RefreshRotation 1.5s infinite linear;
+	-o-animation: RefreshRotation 1.5s infinite linear;
+	animation: RefreshRotation 1.5s infinite linear
+}
+@-webkit-keyframes RefreshRotation {
+from {
+-webkit-transform:rotate(0)
+}
+to {
+-webkit-transform:rotate(360deg)
+}
+}
+@-moz-keyframes RefreshRotation {
+from {
+-moz-transform:rotate(0)
+}
+to {
+-moz-transform:rotate(360deg)
+}
+}
+@-o-keyframes RefreshRotation {
+from {
+-o-transform:rotate(0)
+}
+to {
+-o-transform:rotate(360deg)
+}
+}
+@keyframes RefreshRotation {
+from {
+transform:rotate(0)
+}
+to {
+transform:rotate(360deg)
+}
+}
+.ExtBlockCheckingTitle {
+	font-size: 21px;
+	color: rgb(255,255,255);
+	text-align: center;
+	padding-top: 30px;
+}
+.ExtBlockCheckingDesk {
+	font-size: 13px;
+	color: rgb(85,163,221);
+	text-align: center;
+	padding-top: 19px;
+	padding-bottom: 16px;
+}
+/* END BLOCK CHECKING NOW */
+
+
+.ExtFooter a {
+	font-size: 13px;
+	color: rgb(57,63,80);
+	text-decoration: none;
+}
+.ExtFooter a:hover {
+	text-decoration: underline;
+}
+
+#scrollbox3 {
+    overflow: auto;
+    width: 100%;
+    max-height: 600px;
+}
+
+.track3 {
+    width: 10px;
+    background: rgba(0, 0, 0, 0);
+    margin-right: 2px;
+    border-radius: 10px;
+    -webkit-transition: background 250ms linear;
+    transition: background 250ms linear;
+}
+
+.track3:hover,
+.track3.dragging {
+    background: #d9d9d9; /* Browsers without rgba support */
+    background: rgba(0, 0, 0, 0.15);
+}
+
+.handle3 {
+    width: 7px;
+    right: 0;
+    background: #999;
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 7px;
+    -webkit-transition: width 250ms;
+    transition: width 250ms;
+}
+
+.track3:hover .handle3,
+.track3.dragging .handle3 {
+    width: 10px;
+}
+
+
+
+/* NETFLIX SETTINGS */
+.netflixsettings {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	width: 660px;
+	display: flex;
+	height: 259px;
+	max-height: 259px;
+	padding-top: 25px;
+	padding-bottom: 25px;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: column;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	-webkit-justify-content: space-around;
+	-ms-flex-pack: distribute;
+	justify-content: space-around;
+	background-color: #1b1b1b;
+	font-family: 'Open Sans', sans-serif;
+}
+
+.netflixsettingstitle {
+	color: #db182a;
+	font-size: 30px;
+	line-height: 120%;
+	text-align: center;
+}
+
+.netflixsettingsdesc {
+	padding-left: 100px;
+	padding-right: 100px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	color: #e1d8d3;
+	font-size: 20px;
+	line-height: 140%;
+	text-align: center;
+}
+
+.netflixsettingssave {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+}
+
+.netflixsettingssavebtn {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	width: 320px;
+	padding-top: 17px;
+	padding-bottom: 17px;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	border-radius: 34px;
+	background-color: #ac1926;
+	color: #fff;
+	font-size: 20px;
+	font-weight: 600;
+	cursor: pointer;
+}
+
+.netflixsettingssavebtn:hover {
+	background-color: #dd2031;
+}
+
+.netflixsettingschoose {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+}
+
+.netflixsettingsselect {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	width: 320px;
+	-webkit-box-pack: start;
+	-webkit-justify-content: flex-start;
+	-ms-flex-pack: start;
+	justify-content: flex-start;
+	-webkit-box-flex: 0;
+	-webkit-flex: 0 auto;
+	-ms-flex: 0 auto;
+	flex: 0 auto;
+}
+
+.netflixsettingsselector {
+	display: block;
+	width: 100%;
+	-webkit-box-flex: 1;
+	-webkit-flex: 1;
+	-ms-flex: 1;
+	flex: 1;
+	border-style: solid;
+	border-width: 1px;
+	border-color: rgba(229, 241, 251, .25);
+	background-color: transparent;
+	color: #e0d8d2;
+	font-size: 20px;
+	line-height: 120%;
+	font-weight: 600;
+	height: 55px;
+	padding-left: 10px;
+	background-color: black;
+}
+
+.form {
+	display: block;
+	width: 100%;
+	background-color: transparent;
+}
+
+.form-block {
+	-webkit-box-flex: 1;
+	-webkit-flex: 1;
+	-ms-flex: 1;
+	flex: 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+.v2settings {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  background-color: #f5f5f5;
+  color: #707070;
+}
+
+.v2status {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 54px;
+  padding-right: 16px;
+  padding-left: 16px;
+}
+
+.v2blocks {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding-right: 16px;
+  padding-left: 16px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.v2statusleft {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.v2statusright {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.v2statusleftempty {
+  color: #707070;
+  font-size: 20px;
+}
+.v2statusleftempty.Active {display: none}
+
+.v2statuslefttimer {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #707070;
+}
+
+.v2statusrightrefresh {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
+}
+
+.v2statusrightrefreshico {
+  width: 36px;
+  height: 54px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16.789' height='13.185'%3E%3Cpath d='M16.398 6.592h-1.421a6.591 6.591 0 01-6.592 6.592 6.679 6.679 0 01-2.3-.411 1.1 1.1 0 01-.5-1.7 1.135 1.135 0 011.289-.374 4.2 4.2 0 001.531.28 4.38 4.38 0 004.37-4.389h-1.4a.391.391 0 01-.317-.616l2.521-3.362a.385.385 0 01.616 0l2.521 3.362a.391.391 0 01-.318.618zm-12.4 0A4.384 4.384 0 018.385 2.2a4.638 4.638 0 011.531.28 1.108 1.108 0 001.289-.374 1.1 1.1 0 00-.5-1.7 6.76 6.76 0 00-2.3-.411 6.591 6.591 0 00-6.592 6.592H.392a.391.391 0 00-.317.616l2.523 3.367a.385.385 0 00.616 0l2.521-3.362a.384.384 0 00-.317-.616z' fill='%234189c1'/%3E%3C/svg%3E%0A");
+  background-position: 50% 50%;
+  background-size: 20px;
+  background-repeat: no-repeat;
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+  -webkit-transition: all 200ms ease;
+  transition: all 200ms ease;
+  line-height: 54px;
+}
+
+.v2statusrightrefresh:hover .v2statusrightrefreshico {
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+.v2statusrightrefreshtext {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding-right: 8px;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #4189c1;
+  font-size: 13px;
+}
+
+.v2block {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 16px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  border-radius: 6px;
+  background-color: #fff;
+  box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.23);
+}
+
+.v2footer {
+  padding: 16px;
+  color: #6b7785;
+  font-size: 11px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+}
+
+.v2blockhead {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.v2blockitem {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0 16px;
+  padding-right: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  opacity: 0.5;
+  pointer-events:none;
+  cursor: not-allowed;
+	--toggle-color: #e2e2e2;
+}
+.v2block.Active .v2blockitem {
+	--toggle-color: rgba(19,191,17,1);
+}
+
+.v2blockitem:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+.v2block.Active .v2blockitem {
+  opacity:1;
+  pointer-events:auto;
+  cursor: auto;
+}
+
+.v2blockheadleft {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.v2blockheadright {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+.v2blockheadrstart {
+  display: none;
+}
+.v2block.HistoryActive .v2blockheadrstart {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 16px;
+  padding-right: 16px;
+  padding-left: 16px;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  color: rgba(0, 0, 0, 0.25);
+  font-size: 11px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.v2block.HistoryActive .v2blockheadrstart:hover {
+  color: red;
+}
+
+.v2blockheadleftswitch {
+  margin-left: 16px;
+}
+
+.v2blockheadlefttitle {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding-left: 16px;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: 24px;
+  line-height: 100%;
+}
+.v2block.Active .v2blockheadlefttitle {
+	color: black;
+}
+
+.v2blockitemleft {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+.v2blockitemright {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  align-items: center;
+}
+.v2blockitemrighttoggle {transform: scale(0.7)}
+.v2blockitemleftmain {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+
+.v2blockitemleftmore {
+  width: 100%;
+  color: #6b7785;
+  font-size: 11px;
+}
+.v2blockitemleftmaindesc {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.v2blockitemleftmaindesc:hover {
+  color: #000;
+}
+
+.v2blockitemleftmainaccount {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding-right: 10px;
+  padding-left: 10px;
+  opacity: 0.36;
+  cursor: pointer;
+}
+
+.v2blockitemleftmainaccount:hover {
+  opacity: 1;
+}
+
+.v2blockitemleftmainaccountsettingsico {
+  width: 16px;
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjIiIGhlaWdodD0iMjMiIHZpZXdCb3g9IjAgMCAyMiAyMyIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48dGl0bGU+aWNvX3NldHRpbmdzPC90aXRsZT48cGF0aCBkPSJNMTAuOTQgMTUuMTc0Yy43MDIgMCAxLjM2LS4xOCAxLjk3LS41NC42MTMtLjM2IDEuMS0uODQgMS40Ni0xLjQ0NS4zNi0uNjA0LjU0LTEuMjU2LjU0LTEuOTU4cy0uMTgtMS4zNi0uNTQtMS45N2MtLjM2LS42MTMtLjg0Ny0xLjEtMS40Ni0xLjQ2LS42MS0uMzYtMS4yNjgtLjU0LTEuOTctLjU0cy0xLjM1NC4xOC0xLjk1Ny41NGMtLjYwMy4zNi0xLjA4NS44NDctMS40NDUgMS40Ni0uMzYuNjEtLjU0IDEuMjY4LS41NCAxLjk3cy4xOCAxLjM1NC41NCAxLjk1N2MuMzYuNjAzLjg0MiAxLjA4NCAxLjQ0NSAxLjQ0NC42MDMuMzYgMS4yNTUuNTQgMS45NTcuNTR6bTguMzk3LTIuODM1bDIuMzUgMS44MzVjLjEwNy4wOS4xNy4yMDcuMTg4LjM1LjAxOC4xNDUtLjAxLjI4LS4wOC40MDZsLTIuMjcgMy44OWMtLjA3LjEyNS0uMTY1LjIwNi0uMjgyLjI0Mi0uMTE3LjAzNi0uMjQ4LjAyNy0uMzkyLS4wMjdsLTIuNzgtMS4xMDdjLS43Mi41MjItMS4zNi44OS0xLjkxNyAxLjEwN2wtLjQwNSAyLjk0M2MtLjAzNi4xNDQtLjEwMy4yNi0uMjAyLjM1LS4xLjA5LS4yMTIuMTM2LS4zMzguMTM2SDguNjcyYy0uMTI2IDAtLjIzOC0uMDQ1LS4zMzctLjEzNS0uMS0uMDktLjE1OC0uMjA4LS4xNzYtLjM1MmwtLjQzMy0yLjk0M2MtLjc1Ni0uMzA2LTEuMzg2LS42NzUtMS44OS0xLjEwN0wzLjAzIDE5LjAzNWMtLjI5LjEyNi0uNTE0LjA1NC0uNjc2LS4yMTZMLjA4NiAxNC45M2MtLjA3Mi0uMTI1LS4xLS4yNi0uMDgtLjQwNC4wMTctLjE0NC4wOC0uMjYuMTg4LS4zNWwyLjM3Ni0xLjgzN2MtLjAzNi0uMjUzLS4wNTQtLjYyMi0uMDU0LTEuMTA4IDAtLjQ4Ni4wMTgtLjg1NS4wNTQtMS4xMDdMLjE5NCA4LjI5Yy0uMTA4LS4wOS0uMTctLjIwOC0uMTktLjM1Mi0uMDE3LS4xNDQuMDEtLjI4LjA4Mi0uNDA1bDIuMjY4LTMuODg4Yy4xNjItLjI3LjM4Ny0uMzQyLjY3NS0uMjE2bDIuODA3IDEuMTA2Yy42NDgtLjQ4NiAxLjI3OC0uODU1IDEuODktMS4xMDdMOC4xNi40ODVjLjAxNy0uMTQ0LjA3Ni0uMjYuMTc1LS4zNS4xLS4wOS4yMS0uMTM2LjMzNy0uMTM2aDQuNTM2Yy4xMjYgMCAuMjQuMDQ1LjMzOC4xMzUuMS4wOS4xNjYuMjA3LjIwMi4zNWwuNDA1IDIuOTQ0Yy43MDIuMjcgMS4zNC42MzggMS45MTcgMS4xMDZsMi43OC0xLjEwN2MuMTQ1LS4wNTUuMjc2LS4wNjQuMzkzLS4wMjguMTE3LjAzNi4yMS4xMTcuMjgzLjI0M2wyLjI2OCAzLjg4OGMuMDcyLjEyNi4xLjI2LjA4LjQwNS0uMDE3LjE0NC0uMDguMjYtLjE4OC4zNWwtMi4zNSAxLjgzN2MuMDM3LjI1Mi4wNTUuNjIuMDU1IDEuMTA3IDAgLjQ4Ni0uMDE3Ljg1NS0uMDUzIDEuMTA3eiIgZmlsbD0iIzdGN0Y3RiIgZmlsbC1ydWxlPSJldmVub2RkIi8+PC9zdmc+);
+  background-position: 50% 50%;
+  background-size: 16px;
+  background-repeat: no-repeat;
+}
+
+.v2blockitemleftmainaccountname {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 8px;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-weight: 700;
+}
+
+.v2blockitemleftmaindesclink {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding-left: 16px;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: 11px;
+}
+
+.v2blockitemleftmaindescurl {
+  color: #707070;
+}
+
+.v2blockitemleftmaindescurl:hover {
+  color: #5577e8;
+}

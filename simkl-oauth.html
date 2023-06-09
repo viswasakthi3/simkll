@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>OAuth Redirect Page</title>
+    <meta http-equiv="Content-Security-Policy" content="style-src 'self' 'unsafe-inline';">
+    <style type="text/css">
+      body {
+        font: 16px Arial;
+        color: #333;
+      }
+    </style>
+  <script>
+    parent.codeUrl = window.location.href;
+    chrome.extension.getBackgroundPage().oauth.parseAuthorizationCode(window.location.href);
+    ['netflix','crunchy'].forEach(v=>{
+        window.location.href.indexOf('state='+v)>-1 && chrome.extension.getBackgroundPage()[v].config('EnabledExport',true);
+    });
+
+    if (window.location.href.indexOf('state=do_redirect')>-1) window.location.replace("https://simkl.com?welcome"); else window.close();
+  </script>
+  </head>
+  <body>
+    Redirecting...
+  </body>
+</html>
